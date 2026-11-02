@@ -21,8 +21,8 @@ Diagnóstico territorial, evidencia y análisis reproducible · Edición del 1 d
 | Precipitación anual de referencia | 1433 mm/año | Contexto regional, no lluvia de cada barrio |
 | Pendiente lineal de temperatura media | +0.30 °C/década | Descripción de 1991–2025, sin atribución causal |
 | Días con máxima ≥35 °C | 74.2/año en 1991–2020; 97.2 en 2021–2025 | El bloque reciente tiene solo cinco años; umbral exploratorio |
-| Mayor racha con lluvia <1 mm/día | 90 días, 2016 | Racha dentro del año calendario; probable límite inferior, pues el reanálisis tiene más días débilmente húmedos que la estación ([2.7](book/02_datos/27_validacion_ideam.md)) |
-| Máximo diario de lluvia del registro | 177.33 mm, 2023 | Máximo del reanálisis; el contraste con la estación IDEAM disponible (2017–2021) no cubre ese año ([2.7](book/02_datos/27_validacion_ideam.md)) |
+| Mayor racha con lluvia <1 mm/día | 90 días, 2016 | Racha dentro del año calendario; probable límite inferior, pues el reanálisis tiene más días débilmente húmedos que la estación de referencia ([2.7](book/02_datos/27_validacion_ideam.md)) |
+| Máximo diario de lluvia del registro | 177.33 mm, 2023 | Máximo del reanálisis; ninguna de las cuatro estaciones IDEAM contrastadas lo corrobora ([2.7](book/02_datos/27_validacion_ideam.md)) |
 
 ![Indicadores climáticos de Sincelejo](book/figuras/indicadores.png)
 

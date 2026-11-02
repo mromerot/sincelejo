@@ -19,7 +19,7 @@ Condiciones ambientales y almacenamiento de agua → hábitats y dinámica del v
 
 ## Método y datos
 
-Se audita la composición del corte publicado y se presenta el ciclo de temperatura y lluvia como contexto. Un modelo futuro debe usar una serie semanal suficiente, denominadores compatibles, rezagos y validación temporal sin información futura. Un único corte no permite ajuste predictivo.
+Se audita la composición del corte publicado y se presenta el ciclo de temperatura y lluvia como contexto. Un modelo futuro debe usar una serie semanal suficiente, denominadores compatibles, rezagos y validación temporal sin información futura. Un único corte no permite ajuste predictivo. Para preparar esa serie existen herramientas abiertas, como el paquete data4health del proyecto HARMONIZE [@data4health], que limpia y agrega casos individuales por espacio y tiempo; requiere el listado de casos, que esta edición no tiene.
 
 ## Exposición y vulnerabilidad
 

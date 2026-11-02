@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "build": "myst build --html",
+    "build": "myst build --html && python3 scripts/arreglar_sitemap.py",
     "start": "myst start"
   },
   "devDependencies": {

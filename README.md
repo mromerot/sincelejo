@@ -21,7 +21,7 @@ npm run build
 
 Para vista previa: `npm run start`. Para Pages: `BASE_URL=/sincelejo npm run build`.
 
-`scripts/descargar_ideam.py` actualiza la estación IDEAM (descarga explícita). Los cuadernos usan la instantánea original de `data/raw/`; el hash y los metadatos están en `data/manifest.json`. `data/entorno.json` registra el entorno de cálculo. El flujo de Actions publica las salidas guardadas en GitHub Pages.
+`scripts/descargar_ideam.py` actualiza la estación IDEAM (descarga explícita). Los cuadernos usan la instantánea original de `data/raw/`; el hash y los metadatos están en `data/manifest.json`. `data/entorno.json` registra el entorno de cálculo. El flujo de Actions **no ejecuta los cuadernos**: valida que sus salidas guardadas existan y no tengan errores, y publica esas salidas en GitHub Pages. Por eso, tras cambiar datos o código hay que correr `scripts/ejecutar_cuadernos.py` y subir los cuadernos actualizados.
 
 ## Estructura
 

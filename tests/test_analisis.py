@@ -3,6 +3,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 import numpy as np
 import pandas as pd
+from sincelejo.estaciones import ESTACIONES, PUNTO_NASA, distancia_km
 from sincelejo.analisis import cargar, indicadores, racha_max, pae_catalogo, sensibilidad_calor, diario_estacion, comparar_estacion, umbral_mensual, deficit_trimestral, resumen
 RAW=Path(__file__).resolve().parents[1]/'data/raw/power_1991_2025.json'
 class Metodos(unittest.TestCase):
@@ -80,9 +81,16 @@ class Metodos(unittest.TestCase):
  def test_validacion_ideam_guardada_coincide(self):
   import json
   base=Path(__file__).resolve().parents[1]
-  dia=pd.read_csv(base/'data/raw/ideam_puerta_roja_diario.csv',index_col='fecha',parse_dates=True)
-  r=comparar_estacion(dia,cargar(RAW).PRECTOTCORR)
   g=json.loads((base/'data/processed/validacion_ideam.json').read_text())
-  for k in ('dias_comparados','meses_sospechosos','suma_estacion_mm','r_pearson_mensual_sin_sospechosos'):
-   self.assertEqual(r[k],g[k]) if not isinstance(r[k],float) else self.assertAlmostEqual(r[k],g[k],places=9)
+  self.assertGreaterEqual(len(g),4)
+  nasa=cargar(RAW).PRECTOTCORR
+  for codigo,esperado in g.items():
+   dia=pd.read_csv(base/f'data/raw/ideam_{codigo}_diario.csv',index_col='fecha',parse_dates=True)
+   r=comparar_estacion(dia,nasa)
+   for k in ('dias_comparados','meses_sospechosos','suma_estacion_mm','r_pearson_mensual_sin_sospechosos'):
+    self.assertEqual(r[k],esperado[k]) if not isinstance(r[k],float) else self.assertAlmostEqual(r[k],esperado[k],places=9)
+ def test_distancia_km(self):
+  self.assertAlmostEqual(distancia_km(0,0,0,1),111.19,places=1)       # un grado de ecuador
+  self.assertAlmostEqual(distancia_km(*PUNTO_NASA,*PUNTO_NASA),0.0)
+  e=ESTACIONES['0025025350']; self.assertTrue(1.0<distancia_km(*PUNTO_NASA,e['lat'],e['lon'])<2.5)
 if __name__=='__main__': unittest.main()

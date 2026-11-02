@@ -30,4 +30,4 @@ Se validan calendario, rellenos, rangos y consistencia térmica. No se imputan d
 
 ![Ciclo anual de precipitación y temperatura](../figuras/climatologia.png)
 
-**Validación.** Un contraste con la estación IDEAM Puerta Roja (2017–2021) muestra acuerdo diario bajo y más días húmedos en el reanálisis; vea [2.7](27_validacion_ideam.md) antes de interpretar rachas secas o extremos.
+**Validación.** Un contraste con cuatro estaciones automáticas del IDEAM muestra acuerdo diario muy bajo, extremos no corroborados y totales acumulados que varían de 0,4 a 1,1 veces; vea [2.7](27_validacion_ideam.md) antes de interpretar rachas secas o extremos.

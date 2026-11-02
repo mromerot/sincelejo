@@ -1,4 +1,4 @@
-"""Ejecuta todos los cuadernos y guarda solo resultados obtenidos correctamente."""
+"""Ejecuta los cuadernos (todos, o solo las rutas dadas como argumentos) y guarda solo resultados obtenidos correctamente."""
 from pathlib import Path
 import json, os, sys, platform, importlib.metadata
 os.environ.setdefault('MPLCONFIGDIR','/tmp/mpl-sincelejo')
@@ -7,7 +7,8 @@ import nbformat
 from nbclient import NotebookClient
 from jupyter_client import KernelManager
 ROOT=Path(__file__).resolve().parents[1]
-for p in sorted((ROOT/'book').rglob('*.ipynb')):
+rutas=[Path(a).resolve() for a in sys.argv[1:]] or sorted((ROOT/'book').rglob('*.ipynb'))
+for p in rutas:
     nb=nbformat.read(p,as_version=4)
     km=KernelManager(kernel_name='python3')
     km.kernel_spec.argv=[sys.executable, '-m', 'ipykernel_launcher', '-f', '{connection_file}']
