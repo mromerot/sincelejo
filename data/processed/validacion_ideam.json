@@ -9,7 +9,7 @@
   "dias_lluvia_ge1_ambos": 80,
   "max_diario_estacion_mm": 50.3,
   "max_diario_reanalisis_mm": 128.96,
-  "r_pearson_diaria": 0.032632603789321556,
+  "r_pearson_diaria": 0.03263260378932148,
   "r_spearman_diaria": 0.2162851598045762,
   "meses_comparables": 34,
   "r_pearson_mensual": 0.06992303798705256,

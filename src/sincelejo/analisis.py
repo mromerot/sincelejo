@@ -118,7 +118,9 @@ def comparar_estacion(diario, nasa_precip, min_registros=140, min_dias_mes=25):
     sospechoso = m[(m.nasa > 50) & (m.estacion < .05 * m.nasa)]
     mm = m.drop(sospechoso.index)
     def r(x, y, method='pearson'):
-        return float(x.corr(y, method=method)) if len(x) > 2 else float('nan')
+        if len(x) <= 2: return float('nan')
+        if method == 'spearman': x, y = x.rank(), y.rank()   # evita depender de scipy
+        return float(x.corr(y))
     return {
         'dias_comparados': int(len(j)), 'primer_dia': str(j.index.min().date()), 'ultimo_dia': str(j.index.max().date()),
         'suma_estacion_mm': float(j.mm.sum()), 'suma_reanalisis_mm': float(j.nasa.sum()),
