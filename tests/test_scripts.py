@@ -16,6 +16,17 @@ def correr(tmp, *args):
     return subprocess.run([sys.executable, *args], cwd=tmp, capture_output=True, text=True, timeout=600)
 
 class Scripts(unittest.TestCase):
+    def casi_igual(self, a, b, ruta=''):
+        """Compara estructuras JSON; los decimales difieren en el último dígito entre plataformas."""
+        if isinstance(a, dict):
+            self.assertEqual(a.keys(), b.keys(), ruta)
+            for k in a: self.casi_igual(a[k], b[k], f'{ruta}/{k}')
+        elif isinstance(a, list):
+            self.assertEqual(len(a), len(b), ruta)
+            for i, (x, y) in enumerate(zip(a, b)): self.casi_igual(x, y, f'{ruta}[{i}]')
+        elif isinstance(a, float): self.assertAlmostEqual(a, b, places=9, msg=ruta)
+        else: self.assertEqual(a, b, ruta)
+
     def test_calcular_regenera_las_tablas_publicadas(self):
         with tempfile.TemporaryDirectory() as t:
             t = Path(t); copiar(t)
@@ -33,7 +44,7 @@ class Scripts(unittest.TestCase):
             t = Path(t); copiar(t)
             r = correr(t, 'scripts/validar_ideam.py'); self.assertEqual(r.returncode, 0, r.stderr)
             a = json.loads((t / 'data/processed/validacion_ideam.json').read_text()); b = json.loads((ROOT / 'data/processed/validacion_ideam.json').read_text())
-            self.assertEqual(a, b)
+            self.casi_igual(a, b)
 
     def test_arreglar_sitemap(self):
         with tempfile.TemporaryDirectory() as t:
