@@ -22,3 +22,4 @@ chirps,"Climate Hazards Center, UC Santa Barbara",2026,CHIRPS v3: Rainfall Estim
 firms,NASA FIRMS,2026,Fire Information for Resource Management System: Fire Map,https://firms.modaps.eosdis.nasa.gov/map/,Documentación del mapa consultada; focos no equivalen a perímetros quemados.
 dane2018,DANE,2019,"Ficha CNPV 2018: municipio 70001, Sincelejo",https://sitios.dane.gov.co/cnpv/app/views/informacion/fichas/70001.pdf,Identificación municipal; no se usa como población de 2026.
 daneproy,DANE,2026,Visor de proyecciones de población,https://sitios.dane.gov.co/visor-de-proyecciones-de-poblacion/,Fuente de denominadores por año y área; no se transcriben estimaciones sin descarga.
+ideamdatos,IDEAM,2026,Datos hidrometeorológicos crudos: precipitación. Estación Puerta Roja – AUT (0025025350),https://www.datos.gov.co/resource/s54a-sgyg.json,"Descarga del 2026-11-02; 2017–2021; contraste con NASA POWER en el capítulo 2.7. Series con duplicados y tramos sospechosos."

@@ -12,6 +12,7 @@ source .venv/bin/activate
 pip install -e '.[libro]'
 python scripts/calcular.py
 python scripts/ejecutar_cuadernos.py
+python scripts/validar_ideam.py   # contraste con la estación IDEAM (datos ya incluidos)
 python -m unittest discover -s tests
 python scripts/validar_libro.py
 npm ci
@@ -20,14 +21,14 @@ npm run build
 
 Para vista previa: `npm run start`. Para Pages: `BASE_URL=/sincelejo npm run build`.
 
-Los cuadernos usan la instantánea original de `data/raw/`; el hash y los metadatos están en `data/manifest.json`. `data/entorno.json` registra el entorno de cálculo. El flujo de Actions publica las salidas guardadas en GitHub Pages.
+`scripts/descargar_ideam.py` actualiza la estación IDEAM (descarga explícita). Los cuadernos usan la instantánea original de `data/raw/`; el hash y los metadatos están en `data/manifest.json`. `data/entorno.json` registra el entorno de cálculo. El flujo de Actions publica las salidas guardadas en GitHub Pages.
 
 ## Estructura
 
 - `book/01_conceptos/`: conceptos, contexto, evidencia y revisión.
 - `book/02_datos/`: fuentes, exposición y escala de análisis.
 - `book/03_analisis/`: inundación, sequía, erosión/laderas, calor, incendios, tormentas, dengue, sismo y síntesis.
-- `src/sincelejo/`: indicadores y validación.
+- `src/sincelejo/`: indicadores, validación y preparación común de cuadernos (`nb.py`).
 - `data/`: datos, trazabilidad y resultados tabulares.
 - `scripts/`: descarga explícita, cálculo, ejecución y validación.
 - `recursos_web/eva/`: diseño heredado de Leticia.

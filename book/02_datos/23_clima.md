@@ -29,3 +29,5 @@ Se consultó NASA POWER para el punto 9,3047° N, 75,3978° O: seis variables di
 Se validan calendario, rellenos, rangos y consistencia térmica. No se imputan datos. Las tablas resultantes están en `data/processed/`. Las decisiones de umbral, referencia y reinicio anual están también en el código y en sus pruebas.
 
 ![Ciclo anual de precipitación y temperatura](../figuras/climatologia.png)
+
+**Validación.** Un contraste con la estación IDEAM Puerta Roja (2017–2021) muestra acuerdo diario bajo y más días húmedos en el reanálisis; vea [2.7](27_validacion_ideam.md) antes de interpretar rachas secas o extremos.

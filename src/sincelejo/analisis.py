@@ -92,3 +92,42 @@ def resumen(df):
         'cdd_max_dias':int(a.cdd.max()), 'cdd_max_anio':int(a.cdd.idxmax()),
         'rx1_max_mm':float(a.rx1day.max()), 'rx1_max_anio':int(a.rx1day.idxmax()),
         'tmedia_pendiente_C_decada':float(np.polyfit(a.index, a.tmedia,1)[0]*10)}
+
+def diario_estacion(d10, columna_fecha='fecha', columna_valor='mm'):
+    """Agrega precipitación de 10 min a total diario. Elimina fechas repetidas (el origen
+    publica bloques duplicados con valores idénticos; sumarlos multiplicaría la lluvia)."""
+    d = d10[[columna_fecha, columna_valor]].copy()
+    d[columna_fecha] = pd.to_datetime(d[columna_fecha])
+    d[columna_valor] = pd.to_numeric(d[columna_valor], errors='raise')
+    if (d[columna_valor] < 0).any():
+        raise ValueError('Precipitación negativa')
+    d = d.drop_duplicates(columna_fecha)
+    g = d.groupby(d[columna_fecha].dt.normalize())[columna_valor].agg(['size', 'sum'])
+    g.index.name = 'fecha'
+    return g.rename(columns={'size': 'n_registros', 'sum': 'mm'})
+
+def comparar_estacion(diario, nasa_precip, min_registros=140, min_dias_mes=25):
+    """Contrasta lluvia de estación y reanálisis en días con >=min_registros de 144.
+    Devuelve métricas diarias y mensuales y los meses con posible falla del sensor
+    (estación <5 % del reanálisis cuando éste supera 50 mm)."""
+    ok = diario[diario.n_registros >= min_registros]
+    j = ok.join(nasa_precip.rename('nasa'), how='inner')
+    if j.empty: raise ValueError('Sin días comunes')
+    m = j.groupby(j.index.to_period('M')).agg(dias=('mm', 'size'), estacion=('mm', 'sum'), nasa=('nasa', 'sum'))
+    m = m[m.dias >= min_dias_mes]
+    sospechoso = m[(m.nasa > 50) & (m.estacion < .05 * m.nasa)]
+    mm = m.drop(sospechoso.index)
+    def r(x, y, method='pearson'):
+        return float(x.corr(y, method=method)) if len(x) > 2 else float('nan')
+    return {
+        'dias_comparados': int(len(j)), 'primer_dia': str(j.index.min().date()), 'ultimo_dia': str(j.index.max().date()),
+        'suma_estacion_mm': float(j.mm.sum()), 'suma_reanalisis_mm': float(j.nasa.sum()),
+        'dias_lluvia_ge1_estacion': int((j.mm >= 1).sum()), 'dias_lluvia_ge1_reanalisis': int((j.nasa >= 1).sum()),
+        'dias_lluvia_ge1_ambos': int(((j.mm >= 1) & (j.nasa >= 1)).sum()),
+        'max_diario_estacion_mm': float(j.mm.max()), 'max_diario_reanalisis_mm': float(j.nasa.max()),
+        'r_pearson_diaria': r(j.mm, j.nasa), 'r_spearman_diaria': r(j.mm, j.nasa, 'spearman'),
+        'meses_comparables': int(len(m)), 'r_pearson_mensual': r(m.estacion, m.nasa),
+        'meses_sospechosos': [str(p) for p in sospechoso.index],
+        'meses_sin_sospechosos': int(len(mm)), 'r_pearson_mensual_sin_sospechosos': r(mm.estacion, mm.nasa),
+        'razon_estacion_reanalisis_sin_sospechosos': float(mm.estacion.sum() / mm.nasa.sum()) if len(mm) else float('nan'),
+    }
