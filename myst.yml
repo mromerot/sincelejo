@@ -1,0 +1,131 @@
+version: 1
+project:
+  title: EVA — Riesgos de Sincelejo
+  subtitle: Amenazas, riesgos de desastres y climáticos · Sucre, Colombia
+  description: 'Libro reproducible de Sincelejo: ocho amenazas, evidencia institucional,
+    clima 1991–2025, escenarios y medidas.'
+  keywords:
+  - EVA
+  - Sincelejo
+  - Sucre
+  - riesgo climático
+  - desastres
+  - MyST
+  authors:
+  - name: Mauricio Romero
+    orcid: 0000-0003-3282-0372
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  github: mromerot/sincelejo
+  bibliography:
+  - references.bib
+  jupyter: false
+  settings:
+    output_matplotlib_strings: remove
+  exclude:
+  - README.md
+  - data/**
+  - scripts/**
+  - tests/**
+  - src/**
+  - _build/**
+  - recursos_web/**
+  toc:
+  - file: index.md
+  - file: book/01_conceptos/index.md
+    children:
+    - file: book/01_conceptos/11_marco_riesgo.md
+    - file: book/01_conceptos/12_riesgo_climatico.md
+    - file: book/01_conceptos/13_marco_colombia.md
+    - file: book/01_conceptos/14_proceso_evaluacion.md
+    - file: book/01_conceptos/15_contexto_sincelejo.md
+    - file: book/01_conceptos/16_evidencia.md
+    - file: book/01_conceptos/17_perfil_riesgos.ipynb
+    - file: book/01_conceptos/18_revision_literatura.md
+  - file: book/02_datos/index.md
+    children:
+    - file: book/02_datos/21_amenaza.md
+    - file: book/02_datos/22_exposicion.md
+    - file: book/02_datos/23_clima.md
+    - file: book/02_datos/24_otros.md
+    - file: book/02_datos/25_catalogo.md
+    - file: book/02_datos/26_area_estudio.ipynb
+  - file: book/03_analisis/index.md
+  - file: book/03_analisis/31_inundacion/index.md
+    children:
+    - file: book/03_analisis/31_inundacion/a_descripcion.md
+    - file: book/03_analisis/31_inundacion/b_amenaza.ipynb
+    - file: book/03_analisis/31_inundacion/c_riesgo.ipynb
+    - file: book/03_analisis/31_inundacion/d_escenarios.ipynb
+    - file: book/03_analisis/31_inundacion/e_medidas.md
+  - file: book/03_analisis/32_sequia/index.md
+    children:
+    - file: book/03_analisis/32_sequia/a_descripcion.md
+    - file: book/03_analisis/32_sequia/b_amenaza.ipynb
+    - file: book/03_analisis/32_sequia/c_riesgo.ipynb
+    - file: book/03_analisis/32_sequia/d_escenarios.ipynb
+    - file: book/03_analisis/32_sequia/e_medidas.md
+  - file: book/03_analisis/33_erosion/index.md
+    children:
+    - file: book/03_analisis/33_erosion/a_descripcion.md
+    - file: book/03_analisis/33_erosion/b_amenaza.ipynb
+    - file: book/03_analisis/33_erosion/c_riesgo.ipynb
+    - file: book/03_analisis/33_erosion/d_escenarios.ipynb
+    - file: book/03_analisis/33_erosion/e_medidas.md
+  - file: book/03_analisis/34_calor/index.md
+    children:
+    - file: book/03_analisis/34_calor/a_descripcion.md
+    - file: book/03_analisis/34_calor/b_amenaza.ipynb
+    - file: book/03_analisis/34_calor/c_riesgo.ipynb
+    - file: book/03_analisis/34_calor/d_escenarios.ipynb
+    - file: book/03_analisis/34_calor/e_medidas.md
+  - file: book/03_analisis/35_incendios/index.md
+    children:
+    - file: book/03_analisis/35_incendios/a_descripcion.md
+    - file: book/03_analisis/35_incendios/b_amenaza.ipynb
+    - file: book/03_analisis/35_incendios/c_riesgo.ipynb
+    - file: book/03_analisis/35_incendios/d_escenarios.ipynb
+    - file: book/03_analisis/35_incendios/e_medidas.md
+  - file: book/03_analisis/36_lluvias_vendavales/index.md
+    children:
+    - file: book/03_analisis/36_lluvias_vendavales/a_descripcion.md
+    - file: book/03_analisis/36_lluvias_vendavales/b_amenaza.ipynb
+    - file: book/03_analisis/36_lluvias_vendavales/c_riesgo.ipynb
+    - file: book/03_analisis/36_lluvias_vendavales/d_escenarios.ipynb
+    - file: book/03_analisis/36_lluvias_vendavales/e_medidas.md
+  - file: book/03_analisis/37_dengue/index.md
+    children:
+    - file: book/03_analisis/37_dengue/a_descripcion.md
+    - file: book/03_analisis/37_dengue/b_amenaza.ipynb
+    - file: book/03_analisis/37_dengue/c_riesgo.ipynb
+    - file: book/03_analisis/37_dengue/d_escenarios.ipynb
+    - file: book/03_analisis/37_dengue/e_medidas.md
+  - file: book/03_analisis/38_sismo/index.md
+    children:
+    - file: book/03_analisis/38_sismo/a_descripcion.md
+    - file: book/03_analisis/38_sismo/b_amenaza.ipynb
+    - file: book/03_analisis/38_sismo/c_riesgo.ipynb
+    - file: book/03_analisis/38_sismo/d_escenarios.ipynb
+    - file: book/03_analisis/38_sismo/e_medidas.md
+  - file: book/03_analisis/39_sintesis.ipynb
+  - file: book/03_analisis/310_multiamenaza.ipynb
+  - title: Recursos
+    children:
+    - file: book/recursos/colab.md
+    - file: book/recursos/glosario.md
+    - file: book/recursos/software.md
+    - file: book/recursos/faq.md
+    - file: book/recursos/citar.md
+site:
+  template: book-theme
+  options:
+    folders: true
+    logo: recursos_web/eva/logo.svg
+    logo_dark: recursos_web/eva/logo_oscuro.svg
+    logo_alt: EVA — Evaluación y análisis de riesgos de desastres
+    logo_text: Riesgos de Sincelejo · Sucre
+    favicon: recursos_web/eva/favicon.png
+    style: recursos_web/eva/eva.css
+  parts:
+    primary_sidebar_footer: recursos_web/eva/pie_sidebar.md

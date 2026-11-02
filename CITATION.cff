@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite el libro y el commit de la edición consultada."
+title: "EVA — Riesgos de desastres y climáticos de Sincelejo"
+authors:
+  - family-names: Romero
+    given-names: Mauricio
+    orcid: "https://orcid.org/0000-0003-3282-0372"
+version: 0.1.0
+date-released: 2026-11-01
+url: "https://mromerot.github.io/sincelejo/"
+repository-code: "https://github.com/mromerot/sincelejo"
+license: CC-BY-4.0

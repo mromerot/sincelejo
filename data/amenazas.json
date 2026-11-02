@@ -1,0 +1,372 @@
+[
+  {
+    "key": "inundacion",
+    "folder": "31_inundacion",
+    "num": "3.1",
+    "name": "Inundación pluvial y de arroyos",
+    "short": "Inundación",
+    "summary": "La decisión inicial es identificar los puntos donde la escorrentía supera la capacidad del cauce o drenaje y dónde una falla corta rutas o servicios. La lluvia regional demuestra variabilidad; la evidencia de intervención municipal justifica inspección, sin delimitar una mancha de amenaza.",
+    "evidence": "En julio de 2025 la Alcaldía reportó limpieza preventiva de arroyos en San Miguel, El Poblado y el sector del relleno sanitario [@arroyos2025]. Es una evidencia localizada de gestión, no una medición de la probabilidad de inundación.",
+    "process": "Lluvia intensa → escorrentía y concentración en microcuencas → desborde u obstrucción del drenaje → entrada de agua y corte de accesos. La impermeabilización, residuos, ocupación de rondas y secciones insuficientes pueden modificar esta cadena; deben comprobarse en cada sitio.",
+    "questions": [
+      "¿Qué microcuencas descargan en los puntos reportados y qué pasos se obstruyen?",
+      "¿Qué profundidades, velocidades y tiempos de llegada producirían tormentas de diseño?",
+      "¿Una obra disminuye el daño local a costa de aumentarlo aguas abajo?"
+    ],
+    "method": "Se calculan Rx1day, Rx5day y días ≥20 mm como contexto. Para modelar inundación se necesita lluvia subdiaria y un modelo lluvia–escorrentía enlazado con una red hidráulica y terreno de detalle. Validar con marcas de agua y eventos fechados. No transformar directamente lluvia diaria en altura de inundación.",
+    "exposure": "Viviendas junto a cauces y drenajes, pasos viales, escuelas, comercios y redes que puedan quedar aislados. Georreferenciar entradas, cotas de piso, sótanos, materiales y rutas seguras.",
+    "vulnerability": "La fracción de daño depende de profundidad, duración, velocidad y tipología. Las curvas internacionales requieren contraste con materiales y costos locales. La capacidad de evacuar y la continuidad sanitaria son dimensiones adicionales.",
+    "result": "Los indicadores describen lluvias regionales; el estado actual del riesgo es un diagnóstico localizado por evidencia. No hay estimación publicada de edificios inundados, población expuesta ni pérdidas.",
+    "columns": [
+      "rx1day",
+      "rx5day",
+      "r20"
+    ],
+    "riskmetric": "Profundidad/velocidad por retorno + personas y activos intersectados + daño y horas de interrupción",
+    "gap": "Topografía, lluvia subdiaria, red de drenaje, inventario de activos y validación de eventos",
+    "actions": [
+      [
+        "Conocimiento",
+        "Levantar secciones, obstrucciones y cotas en puntos reportados",
+        "Planeación, gestión del riesgo y prestador",
+        "Puntos levantados y modelo contrastado con eventos"
+      ],
+      [
+        "Reducción",
+        "Mantenimiento trazable y soluciones de retención/infiltración donde sean viables",
+        "Infraestructura y autoridad ambiental",
+        "Inspecciones antes de lluvias; capacidad recuperada"
+      ],
+      [
+        "Manejo",
+        "Definir cierres y rutas según observación local y avisos oficiales",
+        "CMGRD y comunidad",
+        "Tiempo de activación y simulacros de acceso"
+      ]
+    ],
+    "maladapt": "Canalizar puede acelerar el flujo y transferir daños. La infiltración debe verificar suelo, estabilidad y protección de aguas subterráneas. Reasentamientos requieren estudios y garantías sociales; un mapa regional no los justifica."
+  },
+  {
+    "key": "sequia",
+    "folder": "32_sequia",
+    "num": "3.2",
+    "name": "Sequía y seguridad hídrica",
+    "short": "Sequía y agua",
+    "summary": "La prioridad de gestión es la continuidad del abastecimiento, integrando clima, captación, energía y distribución. Una temporada seca y un déficit estructural de suministro pueden coexistir y requieren respuestas distintas.",
+    "evidence": "CARSUCRE describe presiones por explotación intensiva y dificultades de recarga en Morroa [@carsucre2024]. La Alcaldía documentó preparación para El Niño en enero de 2024 [@nino2024]. Estas fuentes respaldan examinar el sistema hídrico; no permiten atribuir cada interrupción al clima.",
+    "process": "Déficit persistente de lluvia → cambios en humedad y recarga → estrés sobre fuentes y usos, modulado por extracción y almacenamiento. En la ciudad se suma una segunda cadena: falla de energía o bombeo → baja distribución → almacenamiento doméstico y desigualdad de acceso.",
+    "questions": [
+      "¿Cómo cambia la persistencia del déficit de lluvia entre años?",
+      "¿Cuánto del problema de suministro se explica por oferta, pérdidas de red, demanda o interrupción eléctrica?",
+      "¿Qué sectores tienen menor autonomía y capacidad de recibir agua segura?"
+    ],
+    "method": "CDD describe rachas secas; Z-P3 compara acumulados trimestrales con la climatología del mes de cierre. Se propone contrastar después con SPI/SPEI, humedad de suelo y piezometría. La respuesta del acuífero puede presentar rezagos y depender de recarga fuera del punto climático.",
+    "exposure": "Hogares, instituciones sanitarias, escuelas, actividades económicas y producción rural conectados a cada fuente. El inventario útil es por sistema y sector de servicio, no por proximidad al pozo.",
+    "vulnerability": "Continuidad horaria, capacidad de almacenamiento seguro, ingresos, movilidad, calidad del agua y redundancia operativa. La vulnerabilidad agrícola incluye calendario, suelo, cultivo y acceso al agua; no se representa mediante daño de edificaciones.",
+    "result": "Se publican rachas y anomalías meteorológicas. La seguridad hídrica requiere balances y series operativas adicionales: no se infiere un agotamiento del acuífero ni un porcentaje de hogares desabastecidos.",
+    "columns": [
+      "p_total",
+      "cdd"
+    ],
+    "riskmetric": "Horas sin servicio, volumen no suministrado y hogares por sector; pérdidas productivas por cultivo",
+    "gap": "Niveles estáticos y dinámicos, extracción, recarga, demanda, pérdidas de red y continuidad",
+    "actions": [
+      [
+        "Conocimiento",
+        "Integrar piezometría, bombeo, energía y continuidad en una misma serie",
+        "CARSUCRE, prestador y municipio",
+        "Pozos y sectores con seguimiento y metadatos"
+      ],
+      [
+        "Reducción",
+        "Reducir fugas, proteger recarga y evaluar redundancia de fuentes y energía",
+        "Prestador y autoridad ambiental",
+        "Volumen recuperado y autonomía probada"
+      ],
+      [
+        "Manejo",
+        "Plan de abastecimiento alterno con criterios de calidad y acceso",
+        "CMGRD y prestador",
+        "Sectores cubiertos y tiempo de restablecimiento"
+      ]
+    ],
+    "maladapt": "Más bombeo sin balance hidrogeológico puede trasladar el déficit al acuífero. El almacenamiento doméstico debe incluir manejo sanitario y prevención de criaderos. Una nueva fuente necesita evaluar calidad, energía, costos y efectos ambientales."
+  },
+  {
+    "key": "erosion",
+    "folder": "33_erosion",
+    "num": "3.3",
+    "name": "Erosión y movimientos en masa",
+    "short": "Erosión y laderas",
+    "summary": "El análisis debe concentrarse en taludes, laderas intervenidas y márgenes de cauces. La lluvia puede activar procesos, pero la pendiente por sí sola no es una probabilidad de falla.",
+    "evidence": "El diagnóstico del PDM identifica remoción en masa en Sierra Flor y corredores hacia Tolú (p. 65) [@pdm2024]. La mención sirve para orientar reconocimiento; la delimitación de cada condición exige cartografía y estudios de sitio.",
+    "process": "Meteorización, corte, relleno o pérdida de cobertura → cambio en resistencia y drenaje → saturación o erosión concentrada → falla de talud y bloqueo de vías o cauces. La erosión superficial y un deslizamiento tienen mecanismos y métricas diferentes.",
+    "questions": [
+      "¿Dónde existen movimientos activos, grietas o cambios de drenaje?",
+      "¿Qué cortes, rellenos o descargas aumentan la inestabilidad?",
+      "¿Qué viviendas o vías quedan bajo la trayectoria de un movimiento?"
+    ],
+    "method": "Se conserva la lluvia acumulada como contexto detonante. El estudio posterior debe integrar inventario, geología, geomorfología, pendientes y geotecnia; validar espacialmente con sitios no usados en el ajuste. No se adopta una pendiente universal como frontera entre seguro y peligroso.",
+    "exposure": "Activos sobre y bajo taludes, vías de acceso y redes enterradas. Incluir zonas de alcance y depósitos, no solamente el punto de origen.",
+    "vulnerability": "Calidad de cimentación, geometría de cortes, drenaje, mantenimiento y tiempo disponible de evacuación. Una vivienda puede fallar por pérdida de soporte sin quedar completamente cubierta por material.",
+    "result": "Hay evidencia territorial que justifica investigación específica. No se han estimado áreas de susceptibilidad ni probabilidades de deslizamiento; Rx5day no reemplaza esa evaluación.",
+    "columns": [
+      "rx5day",
+      "p_total"
+    ],
+    "riskmetric": "Probabilidad y alcance de falla + activos y rutas afectadas",
+    "gap": "Inventario georreferenciado, geología, sondeos, drenajes, geometría y parámetros resistentes",
+    "actions": [
+      [
+        "Conocimiento",
+        "Inspeccionar sitios reportados y registrar cambios con fecha y ubicación",
+        "Planeación y equipo geotécnico",
+        "Inventario de movimientos revisado en campo"
+      ],
+      [
+        "Reducción",
+        "Diseñar drenaje y estabilización según mecanismo de falla",
+        "Infraestructura y especialistas",
+        "Obras verificadas y mantenimiento documentado"
+      ],
+      [
+        "Manejo",
+        "Establecer observación, comunicación y rutas alternativas",
+        "CMGRD y comunidades",
+        "Rutas practicables y protocolo ensayado"
+      ]
+    ],
+    "maladapt": "Muros sin drenaje, cargas adicionales y cortes al pie pueden empeorar la estabilidad. Plantar árboles no sustituye un diseño geotécnico y debe considerar raíces, agua y características de la ladera."
+  },
+  {
+    "key": "calor",
+    "folder": "34_calor",
+    "num": "3.4",
+    "name": "Calor extremo",
+    "short": "Calor extremo",
+    "summary": "El reanálisis permite comparar exposición meteorológica potencial entre periodos. Para priorizar barrios hacen falta mediciones urbanas, sombra y condiciones de vivienda y trabajo.",
+    "evidence": "La evaluación regional del IPCC respalda el aumento de la preocupación por extremos cálidos [@ipcc2021]. En esta edición la evidencia cuantitativa específica procede de la serie NASA, no de registros locales de mortalidad.",
+    "process": "Temperatura elevada y menor enfriamiento nocturno → mayor carga térmica, modulada por humedad, radiación, viento y actividad → estrés sobre salud, trabajo y demanda de energía. La temperatura de una cubierta vista por satélite no equivale a la temperatura del aire respirado.",
+    "questions": [
+      "¿Cuántos días y noches superan umbrales explícitos?",
+      "¿Qué grupos carecen de sombra, agua o posibilidad de modificar horarios?",
+      "¿Cómo cambia la frecuencia al perturbar la temperatura de referencia?"
+    ],
+    "method": "Se calculan TX35, noches TN25 y excedencias del percentil 90 mensual. La sensibilidad suma 1–3 °C a máxima y mínima históricas. No se calcula UTCI/WBGT con medias diarias incompletas, ni se combina máxima diaria con humedad media para aparentar un máximo de índice de calor.",
+    "exposure": "Personas en exteriores, centros educativos, espacios de cuidado, transporte y viviendas con baja ventilación. La población está expuesta en horarios y lugares distintos de su residencia.",
+    "vulnerability": "Edad, condiciones de salud, carga laboral, acceso a agua y energía, calidad de vivienda y redes de cuidado. Una alerta útil requiere comunicación y opciones reales de reducir exposición.",
+    "result": "Se cuantifican días y noches calurosos del entorno regional. No se estiman muertes, consultas o productividad perdida; los umbrales empleados no sustituyen una relación epidemiológica local.",
+    "columns": [
+      "tmedia",
+      "tx35",
+      "noches25",
+      "tx90_mes"
+    ],
+    "riskmetric": "Persona-horas bajo carga térmica y efectos calibrados con vigilancia sanitaria",
+    "gap": "Meteorología horaria, muestreo urbano, exposición ocupacional y relación local temperatura–salud",
+    "actions": [
+      [
+        "Conocimiento",
+        "Medir temperatura y humedad en zonas y usos contrastantes",
+        "Ambiente, salud y universidades",
+        "Cobertura horaria y estaciones validadas"
+      ],
+      [
+        "Reducción",
+        "Aumentar sombra y ventilación en espacios de mayor uso",
+        "Planeación, educación y empleadores",
+        "Área sombreada utilizable y reducción térmica medida"
+      ],
+      [
+        "Manejo",
+        "Acordar protocolos de calor con autoridades sanitarias y laborales",
+        "Salud, educación y empleadores",
+        "Centros y equipos con protocolos aplicables"
+      ]
+    ],
+    "maladapt": "El aire acondicionado aislado puede aumentar costos, demanda eléctrica y calor exterior. La arborización necesita agua, especies adecuadas y mantenimiento. Las medidas deben conservar acceso equitativo durante apagones."
+  },
+  {
+    "key": "incendios",
+    "folder": "35_incendios",
+    "num": "3.5",
+    "name": "Incendios de vegetación y humo",
+    "short": "Incendios y humo",
+    "summary": "La meteorología seca y cálida es una condición facilitadora. La ignición, los combustibles y la capacidad de respuesta determinan si se produce un incendio y su impacto.",
+    "evidence": "El PDM incluye incendios forestales en su identificación de amenazas [@pdm2024]. La presente edición no cuenta con un catálogo municipal depurado ni con áreas quemadas verificadas.",
+    "process": "Sequedad y calor → menor humedad de combustible; una fuente de ignición y condiciones de propagación → fuego → daño en vegetación, viviendas o redes y humo. El humo puede llegar desde fuera del municipio.",
+    "questions": [
+      "¿Dónde coinciden combustible, igniciones y viviendas o infraestructura?",
+      "¿Qué episodios son nuevos y cuáles son varias detecciones del mismo fuego?",
+      "¿Qué corredores permiten evacuación y acceso de respuesta?"
+    ],
+    "method": "Se cuenta la coincidencia de días secos y máximas superiores al percentil mensual de referencia. Es un indicador meteorológico exploratorio. La siguiente etapa cruza focos FIRMS depurados, perímetros quemados, coberturas y viento; no se denomina FWI al indicador simple.",
+    "exposure": "Interfaz entre vegetación y asentamientos, escuelas rurales, líneas eléctricas, cultivos y personas alcanzadas por humo. El análisis de humo exige transporte atmosférico o mediciones de calidad del aire.",
+    "vulnerability": "Materiales combustibles, acumulación de residuos, acceso de vehículos, disponibilidad de agua y capacidades de comunicación. Salud y condiciones de vivienda modifican el impacto del humo.",
+    "result": "Se identifica el contexto seco–cálido y una necesidad de gestión. No se reportan hectáreas quemadas, incendios por año ni pérdidas a partir de días secos.",
+    "columns": [
+      "cdd",
+      "compuesto",
+      "viento_medio"
+    ],
+    "riskmetric": "Área e intensidad de fuego, activos afectados y exposición a partículas",
+    "gap": "Catálogo de incendios, perímetros, combustible, ignición, viento y calidad del aire",
+    "actions": [
+      [
+        "Conocimiento",
+        "Consolidar reportes y cartografiar interfaz y accesos",
+        "Bomberos, CARSUCRE y municipio",
+        "Episodios únicos verificados y mapa de accesos"
+      ],
+      [
+        "Reducción",
+        "Manejar combustibles e igniciones con participación local",
+        "Autoridad ambiental y propietarios",
+        "Zonas intervenidas con mantenimiento y evaluación ecológica"
+      ],
+      [
+        "Manejo",
+        "Probar comunicaciones, abastecimiento y rutas",
+        "Bomberos y CMGRD",
+        "Tiempos de llegada y acceso comprobados"
+      ]
+    ],
+    "maladapt": "Despejar vegetación indiscriminadamente puede aumentar erosión y calor. Las quemas y líneas de control requieren protocolos, autorización y especialistas; no se recomiendan como una receta general."
+  },
+  {
+    "key": "lluvias_vendavales",
+    "folder": "36_lluvias_vendavales",
+    "num": "3.6",
+    "name": "Lluvias intensas y vendavales",
+    "short": "Lluvias y vendavales",
+    "summary": "La lluvia intensa forma parte del análisis de inundación, mientras que el viento produce daños por mecanismos propios. El objetivo de este capítulo es evitar confundir ambos y preparar continuidad de servicios.",
+    "evidence": "No se incorporó una serie local verificada de ráfagas o daños por vendaval. Se conserva esta amenaza como componente de evaluación de tormentas y se explicita la brecha de datos; el viento medio diario no certifica su intensidad extrema.",
+    "process": "Tormenta convectiva → lluvia, ráfagas y posiblemente descargas eléctricas → fallas de cubiertas, árboles y redes → interrupción de energía y transporte. La coincidencia puede dificultar respuesta a la inundación.",
+    "questions": [
+      "¿Qué cubiertas y redes tienen fallas de anclaje o mantenimiento?",
+      "¿Cómo distinguir ráfaga extrema de viento medio?",
+      "¿Qué servicios dependen de energía sin respaldo?"
+    ],
+    "method": "Se muestran lluvia extrema diaria y velocidad media diaria máxima de cada año por separado. Para daños por viento se requieren ráfagas de duración conocida y funciones de fragilidad compatibles. No se convierte un promedio diario en ráfaga mediante un factor universal.",
+    "exposure": "Cubiertas, mobiliario, árboles próximos a activos, redes aéreas, equipos y actividades al aire libre. Inventariar conexiones, apoyos y ubicación, no solo área de techo.",
+    "vulnerability": "Anclajes, corrosión, calidad constructiva, mantenimiento de árboles y redundancia eléctrica. El daño por caída de un árbol depende también de su estado y del sitio.",
+    "result": "El libro presenta contexto meteorológico y una ruta de inspección. No establece velocidades de diseño, periodos de retorno de ráfagas ni un historial completo de vendavales.",
+    "columns": [
+      "rx1day",
+      "r20",
+      "viento_dia_max"
+    ],
+    "riskmetric": "Ráfaga de duración definida + fragilidad de cubiertas y redes + interrupción",
+    "gap": "Ráfagas medidas, inventario de cubiertas y catálogo de daños por tormenta",
+    "actions": [
+      [
+        "Conocimiento",
+        "Crear registro de tormentas, daños y duración del viento medido",
+        "IDEAM, municipio y operadores",
+        "Registros comparables con unidad y duración"
+      ],
+      [
+        "Reducción",
+        "Inspeccionar anclajes, arbolado y respaldo eléctrico",
+        "Infraestructura, operadores y propietarios",
+        "Elementos corregidos y pruebas de respaldo"
+      ],
+      [
+        "Manejo",
+        "Coordinar avisos oficiales y continuidad de servicios",
+        "CMGRD y operadores",
+        "Tiempo de restablecimiento por servicio"
+      ]
+    ],
+    "maladapt": "Podas sin criterio pueden deteriorar árboles y reducir sombra. El refuerzo de cubiertas exige revisar conexiones y estructura completa. Un equipo eléctrico de respaldo requiere mantenimiento y prueba con carga."
+  },
+  {
+    "key": "dengue",
+    "folder": "37_dengue",
+    "num": "3.7",
+    "name": "Dengue y condiciones climáticas",
+    "short": "Dengue",
+    "summary": "Existe evidencia de carga sanitaria local. El análisis climático debe complementar la vigilancia, incluyendo almacenamiento de agua, control vectorial y condiciones sociales.",
+    "evidence": "La Alcaldía informó 948 casos notificados hasta la semana epidemiológica 36 de 2024: 642 confirmados por laboratorio, 300 probables y 6 por nexo [@dengue2024]. El corte no es un total anual y no permite calcular una tendencia.",
+    "process": "Condiciones ambientales y almacenamiento de agua → hábitats y dinámica del vector, junto con circulación viral, inmunidad y movilidad → transmisión y enfermedad. La relación con temperatura o lluvia puede tener rezagos y no ser lineal.",
+    "questions": [
+      "¿Los casos se asignan por residencia, procedencia o notificación?",
+      "¿Qué retrasos y cambios de diagnóstico afectan la serie?",
+      "¿Añadir variables climáticas mejora un pronóstico frente a una línea base estacional?"
+    ],
+    "method": "Se audita la composición del corte publicado y se presenta el ciclo de temperatura y lluvia como contexto. Un modelo futuro debe usar una serie semanal suficiente, denominadores compatibles, rezagos y validación temporal sin información futura. Un único corte no permite ajuste predictivo.",
+    "exposure": "Población en lugares de residencia, trabajo y movilidad donde existe transmisión. Diferenciar población censada, proyectada y atendida. No multiplicar temperatura por habitantes para obtener casos.",
+    "vulnerability": "Acceso a agua continua, condiciones de almacenamiento, vivienda, movilidad, atención y control vectorial. La gravedad y la transmisión requieren modelos distintos.",
+    "result": "El resultado sanitario es un corte documental, no un pronóstico ni incidencia anual. Se identifica la necesidad de integrar datos epidemiológicos y operativos de agua antes de atribuir variaciones al clima.",
+    "columns": [
+      "tmedia",
+      "p_total"
+    ],
+    "riskmetric": "Incidencia por residencia y semana, hospitalizaciones y desempeño de alerta",
+    "gap": "Serie SIVIGILA por residencia, denominadores, revisiones, serotipos y acciones de control",
+    "actions": [
+      [
+        "Conocimiento",
+        "Integrar vigilancia epidemiológica, entomológica y continuidad de agua",
+        "Salud municipal y prestador",
+        "Series con cortes y definiciones compatibles"
+      ],
+      [
+        "Reducción",
+        "Articular suministro continuo y manejo de recipientes con programas vectoriales",
+        "Salud, prestador y comunidades",
+        "Cobertura de intervenciones y seguimiento entomológico"
+      ],
+      [
+        "Manejo",
+        "Actualizar respuesta según vigilancia y protocolos de salud vigentes",
+        "Autoridad sanitaria y red de atención",
+        "Oportunidad de notificación y atención"
+      ]
+    ],
+    "maladapt": "La fumigación aislada no resuelve fallas de agua o almacenamiento. Toda intervención vectorial debe seguir protocolos sanitarios. Este libro no ofrece diagnóstico ni tratamiento clínico."
+  },
+  {
+    "key": "sismo",
+    "folder": "38_sismo",
+    "num": "3.8",
+    "name": "Sismo y continuidad de infraestructura",
+    "short": "Sismo",
+    "summary": "Un diagnóstico multiamenaza debe contemplar eventos poco frecuentes con daños potencialmente importantes. La evaluación sísmica necesita movimiento del suelo y tipologías estructurales, no indicadores climáticos.",
+    "evidence": "El SGC y GEM presentaron el modelo nacional de amenaza sísmica [@sgc2020]. Es el punto de partida para obtener curvas del sitio. No se extrajeron aquí PGA, aceleraciones espectrales ni una categoría normativa específica para Sincelejo.",
+    "process": "Ruptura sísmica → propagación y respuesta del suelo → demanda estructural → daño y posible interrupción de redes. Las condiciones del suelo y la vulnerabilidad de cada construcción pueden cambiar el resultado para una misma intensidad regional.",
+    "questions": [
+      "¿Qué curvas y condiciones de referencia corresponden al sitio?",
+      "¿Qué inventario estructural y servicios esenciales requieren evaluación?",
+      "¿Qué rutas y redes alternativas permiten sostener agua, salud y respuesta?"
+    ],
+    "method": "Extraer curvas de amenaza del SGC, definir efectos de sitio y clasificar construcciones. Elegir fragilidades por material, sistema, altura y diseño; calcular impactos por eventos con incertidumbre. La magnitud de un sismo y la intensidad del movimiento en el edificio no son intercambiables.",
+    "exposure": "Edificios residenciales, centros de salud, colegios, tanques, estaciones de bombeo y puentes. Para continuidad importa la dependencia entre componentes, además del costo de cada uno.",
+    "vulnerability": "Sistema estructural, irregularidades, mantenimiento y elementos no estructurales. Una instalación que conserva su estructura puede quedar fuera de servicio por equipos, tuberías o energía.",
+    "result": "Se establece el protocolo y el inventario requerido. No se publica PAE sísmica ni pérdidas de un escenario ficticio. La falta de registros incorporados no demuestra amenaza nula.",
+    "columns": [],
+    "riskmetric": "PGA/SA y fragilidad por tipología + daño, funcionalidad y PAE",
+    "gap": "Curvas de amenaza, suelo, inventario estructural, costos y fragilidades compatibles",
+    "actions": [
+      [
+        "Conocimiento",
+        "Evaluar vulnerabilidad de instalaciones esenciales",
+        "Planeación y especialistas estructurales",
+        "Instalaciones evaluadas con método y datos trazables"
+      ],
+      [
+        "Reducción",
+        "Priorizar refuerzo y seguridad no estructural según evaluación",
+        "Propietarios y operadores",
+        "Reducción de vulnerabilidad y continuidad verificada"
+      ],
+      [
+        "Manejo",
+        "Ensayar inspección, comunicación y continuidad tras sismo",
+        "CMGRD y operadores",
+        "Tiempo de recuperación y rutas de respaldo"
+      ]
+    ],
+    "maladapt": "No se sustituyen evaluaciones estructurales por un puntaje social. Los refuerzos parciales pueden generar incompatibilidades. Los escenarios climáticos no modifican directamente la amenaza tectónica."
+  }
+]

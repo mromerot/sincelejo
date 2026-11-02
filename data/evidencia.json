@@ -1,0 +1,72 @@
+[
+  {
+    "id": "E01",
+    "amenaza": "inundacion",
+    "fecha": "2025-07-30",
+    "lugar": "San Miguel; El Poblado; sector del relleno sanitario",
+    "hallazgo": "Reporte de intervención preventiva de aproximadamente 800 metros de arroyos",
+    "fuente": "arroyos2025",
+    "tipo": "reporte institucional",
+    "limite": "No mide frecuencia de inundaciones ni población expuesta"
+  },
+  {
+    "id": "E02",
+    "amenaza": "sequia",
+    "fecha": "2024",
+    "lugar": "Sistema de acueducto de Sincelejo",
+    "hallazgo": "El PDM describe abastecimiento desde Morroa mediante 24 pozos",
+    "fuente": "pdm2024",
+    "tipo": "diagnostico de planeacion",
+    "limite": "Inventario del plan, no verificación operativa de 2026"
+  },
+  {
+    "id": "E03",
+    "amenaza": "sequia",
+    "fecha": "2024",
+    "lugar": "Acuífero de Morroa, jurisdicción de CARSUCRE",
+    "hallazgo": "Presión por explotación intensiva y dificultades de recarga",
+    "fuente": "carsucre2024",
+    "tipo": "diagnostico regional",
+    "limite": "No permite atribuir un descenso piezométrico al cambio climático"
+  },
+  {
+    "id": "E04",
+    "amenaza": "erosion",
+    "fecha": "2024",
+    "lugar": "Sierra Flor y corredores hacia Tolú",
+    "hallazgo": "El diagnóstico del PDM identifica amenaza por remoción en masa",
+    "fuente": "pdm2024",
+    "tipo": "diagnostico de planeacion",
+    "limite": "Requiere cartografía y evaluación geotécnica de cada sitio"
+  },
+  {
+    "id": "E05",
+    "amenaza": "incendios",
+    "fecha": "2024",
+    "lugar": "Municipio de Sincelejo",
+    "hallazgo": "El PDM incluye incendios forestales entre los fenómenos relevantes",
+    "fuente": "pdm2024",
+    "tipo": "identificacion de amenaza",
+    "limite": "No constituye un catálogo georreferenciado de incendios"
+  },
+  {
+    "id": "E06",
+    "amenaza": "dengue",
+    "fecha": "2024-SE36",
+    "lugar": "Sincelejo, notificación a SIVIGILA",
+    "hallazgo": "948 casos notificados: 642 laboratorio, 300 probables y 6 por nexo",
+    "fuente": "dengue2024",
+    "tipo": "corte de vigilancia",
+    "limite": "No es total anual ni incidencia por residencia ni tendencia"
+  },
+  {
+    "id": "E07",
+    "amenaza": "sequia",
+    "fecha": "2024-01-30",
+    "lugar": "Sincelejo",
+    "hallazgo": "Acciones de preparación para El Niño y abastecimiento de agua",
+    "fuente": "nino2024",
+    "tipo": "preparacion institucional",
+    "limite": "No cuantifica pérdidas ni verifica ejecución posterior"
+  }
+]

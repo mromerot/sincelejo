@@ -1,0 +1,32 @@
+{
+  "fuente": "NASA POWER Daily API",
+  "consulta": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,WS10M&community=AG&longitude=-75.3978&latitude=9.3047&start=19910101&end=20251231&format=JSON",
+  "fecha_consulta": "2026-11-01",
+  "sha256": "e70bca9c901349fe936f9a7dc5907da53e1bc95a70877cb8aa3f15aa02eae9ab",
+  "coordenadas_solicitadas": [
+    -75.3978,
+    9.3047
+  ],
+  "header": {
+    "title": "NASA/POWER Source Native Resolution Daily Data",
+    "api": {
+      "version": "v2.10.1",
+      "name": "POWER Daily API"
+    },
+    "sources": [
+      "MERRA2",
+      "POWER"
+    ],
+    "fill_value": -999.0,
+    "time_standard": "LST",
+    "start": "19910101",
+    "end": "20251231"
+  },
+  "alcance": "Punto de reanálisis regional; no representa el promedio del polígono municipal.",
+  "baseline": "1991-2020",
+  "control_calidad": {
+    "dias": 12784,
+    "faltantes": 0,
+    "duplicados": 0
+  }
+}

@@ -1,0 +1,36 @@
+---
+title: 2.5 Catálogo y trazabilidad
+short_title: 2.5 Catálogo y trazabilidad
+---
+
+Consulta de fuentes: **1 de noviembre de 2026**. El campo «revisión» limita lo que se afirma a partir de cada recurso. Una fuente localizada para uso posterior no alimenta las cifras calculadas.
+
+| Clave | Responsable | Recurso | Revisión y uso |
+|---|---|---|---|
+| pdm2024 | Alcaldía de Sincelejo (2024) | [Plan de Desarrollo Pa’ lante Sincelejo 2024–2027. Acuerdo 346 del 22 de mayo de 2024](https://www.alcaldiadesincelejo.gov.co/Transparencia/Normatividad/ACUERDO%20No%20346%20DE%202024.pdf) | PDF completo descargado; pp. 65, 164, 168 y 176. Diagnóstico territorial y abastecimiento. |
+| carsucre2024 | CARSUCRE (2024) | [Plan de Acción Institucional 2024–2027](https://carsucre.gov.co/wp-content/uploads/2025/10/PAI-2024-2027_VF_DEFINITIVO_c.pdf) | Síntesis ambiental, p. 114. Presión sobre el acuífero de Morroa; alcance regional. |
+| arroyos2025 | Alcaldía de Sincelejo (2025) | [Gestión del riesgo ha intervenido arroyos en puntos críticos de Sincelejo](https://www.alcaldiadesincelejo.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/GESTI%C3%93N-DEL-RIESGO-HA-INTERVENIDO-ARROYOS-EN-PUNTOS-CR%C3%8DTICOS-DE-SINCELEJO.aspx) | 30 julio 2025. San Miguel, El Poblado y sector del relleno; reporte de intervención, no inventario de daños. |
+| nino2024 | Alcaldía de Sincelejo (2024) | [Avanza plan de acción para afrontar el fenómeno de El Niño](https://www.alcaldiadesincelejo.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/AVANZA-PLAN-DE-ACCI%C3%93N-PARA-AFRONTAR-EL-FEN%C3%93MENO-DE-EL-NI%C3%91O.aspx) | 30 enero 2024. Preparación institucional para sequía y abastecimiento. |
+| dengue2024 | Alcaldía de Sincelejo (2024) | [Alcaldía intensifica acciones contra el dengue](https://alcaldiadesincelejo.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/ALCALD%C3%8DA-INTENSIFICA-ACCIONES-CONTRA-EL-DENGUE.aspx) | Corte semana epidemiológica 36 de 2024: 948 notificados; 642 laboratorio, 300 probables, 6 nexo. |
+| ins2024 | Instituto Nacional de Salud (2025) | [Informe de evento Dengue, Colombia 2024](https://www.ins.gov.co/buscador-eventos/Informesdeevento/DENGUE%20INFORME%20DE%20EVENTO%202024.pdf) | Informe localizado; fuente para ampliar vigilancia, sin extracción de serie municipal en esta edición. |
+| power | NASA POWER (2026) | [Daily API y documentación del servicio de datos](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) | API consultada y respuesta JSON preservada. Series 1991–2025. |
+| powergrid | NASA POWER (2026) | [API data request tutorial](https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/) | Documentación de resolución meteorológica: 0,5 × 0,625 grados. |
+| ipcc2022 | IPCC (2022) | [Climate Change 2022: Impacts, Adaptation and Vulnerability. Chapter 12: Central and South America](https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_Chapter12.pdf) | Evaluación regional. No representa una proyección puntual para Sincelejo. |
+| ipcc2021 | IPCC (2021) | [Climate Change 2021: The Physical Science Basis. Chapter 12](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-12/) | Sección 12.4.4: información regional y factores climáticos de impacto. |
+| ideamescenarios | IDEAM (2024) | [Nuevas proyecciones climáticas para Colombia: escenarios al 2100](https://ideam.gov.co/sala-de-prensa/noticia/el-ideam-presenta-nuevas-proyecciones-climaticas-para-colombia-escenarios-de-cambio-climatico-al) | Anuncio institucional consultado; no se descargaron ensambles locales. |
+| ideammap | IDEAM (2026) | [Servicio cartográfico Escenario Cambio Climático](https://visualizador.ideam.gov.co/gisserver/rest/services/Escenario_Cambio_Climatico/MapServer) | Catálogo de capas localizado. Fuente para siguiente etapa, sin valores municipales extraídos. |
+| sgc2020 | Servicio Geológico Colombiano y GEM (2020) | [Modelo nacional de amenaza sísmica para Colombia](https://www2.sgc.gov.co/Noticias/Paginas/Modelo-nacional-de-amenaza-sismica-para-Colombia.aspx) | Descripción institucional del modelo; no se extrajo una curva del sitio. |
+| ley1523 | Congreso de Colombia (2012) | [Ley 1523 de 2012: Política Nacional de Gestión del Riesgo de Desastres](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=47141) | Definiciones y procesos; texto consolidado consultado. |
+| decreto1077 | Ministerio de Vivienda, Ciudad y Territorio (2015) | [Decreto Único Reglamentario 1077 de 2015](https://minvivienda.gov.co/normativa/decreto-unico-reglamentario-sector-vivienda-ciudad-y-territorio-decreto-1077-de-2015) | Marco de estudios de amenaza y riesgo para ordenamiento territorial. |
+| minviviendaescala | Ministerio de Vivienda, Ciudad y Territorio (2026) | [¿En qué escala de trabajo se deben realizar los estudios detallados?](https://www.minvivienda.gov.co/node/46807) | Orientación oficial sobre escala urbana 1:2000 y rural suburbana 1:5000. |
+| climada2019 | Aznar-Siguan, Gabriela and Bresch, David N. (2019) | [CLIMADA v1: a global weather and climate risk assessment platform](https://gmd.copernicus.org/articles/12/3085/2019/) | Artículo revisado por pares; DOI 10.5194/gmd-12-3085-2019. |
+| climadadocs | CLIMADA developers (2026) | [End-to-end impact calculation](https://climada-python.readthedocs.io/en/stable/user-guide/climada_engine_Impact.html) | Documentación primaria: eventos, exposición, funciones de impacto y tasas. |
+| climaax | CLIMAAX (2026) | [Climate Risk Assessment Handbook](https://handbook.climaax.eu/) | Marco de evaluación iterativa; transferencia conceptual desde el libro de teoría. |
+| chirps | Climate Hazards Center, UC Santa Barbara (2026) | [CHIRPS v3: Rainfall Estimates from Rain Gauge and Satellite Observations](https://www.chc.ucsb.edu/data/chirps3) | Documentación consultada. Producto complementario; no usado en cálculos publicados. |
+| firms | NASA FIRMS (2026) | [Fire Information for Resource Management System: Fire Map](https://firms.modaps.eosdis.nasa.gov/map/) | Documentación del mapa consultada; focos no equivalen a perímetros quemados. |
+| dane2018 | DANE (2019) | [Ficha CNPV 2018: municipio 70001, Sincelejo](https://sitios.dane.gov.co/cnpv/app/views/informacion/fichas/70001.pdf) | Ficha descargada y tabla 1 contrastada: población censada de 2018, no proyección de 2026. |
+| daneproy | DANE (2026) | [Visor de proyecciones de población](https://sitios.dane.gov.co/visor-de-proyecciones-de-poblacion/) | Fuente de denominadores por año y área; no se transcriben estimaciones sin descarga. |
+
+## Archivos reproducibles
+
+La fuente climática original se preserva en `data/raw/power_1991_2025.json`. Su huella SHA-256, consulta y metadatos están en `data/manifest.json`. `scripts/calcular.py` produce tablas y figuras sin conexión. `scripts/ejecutar_cuadernos.py` vuelve a ejecutar los cuadernos. Las cifras no se actualizan silenciosamente durante la publicación.

@@ -1,0 +1,14 @@
+{
+  "dias": 12784,
+  "inicio": "1991-01-01",
+  "fin": "2025-12-31",
+  "tmedia_base_C": 27.96777867604861,
+  "lluvia_base_mm_anio": 1432.5196666666668,
+  "tx35_base_dias_anio": 74.16666666666667,
+  "tx35_reciente_dias_anio": 97.2,
+  "cdd_max_dias": 90,
+  "cdd_max_anio": 2016,
+  "rx1_max_mm": 177.33,
+  "rx1_max_anio": 2023,
+  "tmedia_pendiente_C_decada": 0.30207113491402765
+}
